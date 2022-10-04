@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9baedf84b25387f448b710418532b7d4, type: 3}
+  m_Name: 021_N_YeuxBleus
+  m_EditorClassIdentifier: 
+  ID: 21
+  Rating: 2
+  AccessoryType: Cou
+  Sprite: {fileID: 21300000, guid: 770d805dcfe60a84bb3fded8986432ab, type: 3}
+  AccessoryName: Yeux Bleus
+  Description: "Un tr\xE8s joli talent bien impressionnant."
+  IsColorable: 0

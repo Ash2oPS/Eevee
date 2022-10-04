@@ -6,7 +6,7 @@ using TMPro;
 public class RewardShow : MonoBehaviour
 {
     public Animation Anim;
-    public SpriteRenderer Hat_SR, Neck_SR, Tail_SR, Ear_SR;
+    public SpriteRenderer Hat_SR, Neck_SR, Tail_SR, Ear_SR, Eevee_SR;
     public TextMeshPro Item_TMP, Type_TMP, Rating_TMP;
     public string CommunText, PeuCommunText, RareText, LegendaireText;
     public Color CommunColor, PeuCommunColor, RareColor, LegendaireColor;
@@ -55,6 +55,10 @@ public class RewardShow : MonoBehaviour
 
             case Ear e:
                 Ear_SR.sprite = accesory.Sprite;
+                break;
+
+            case Body b:
+                Eevee_SR.sprite = accesory.Sprite;
                 break;
         }
 

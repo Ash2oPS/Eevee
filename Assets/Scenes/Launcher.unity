@@ -583,10 +583,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9189ba6f28eea448a8aa3b1522af6e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HatAsset: {fileID: 0}
-  NeckAsset: {fileID: 0}
-  EarAsset: {fileID: 0}
-  TailAsset: {fileID: 0}
+  HatAsset: {fileID: 11400000, guid: 6518f80fb7dae6d4489f8d9599d34dfa, type: 2}
+  NeckAsset: {fileID: 11400000, guid: 1ff958973e9003a4ca6a6cc19b65090b, type: 2}
+  EarAsset: {fileID: 11400000, guid: 56996c9434d19ed43b0610994cd58fd4, type: 2}
+  TailAsset: {fileID: 11400000, guid: da0e7e95dcd13f7408de5a2a07c349ea, type: 2}
+  BodyAsset: {fileID: 11400000, guid: ffba2d9d279125945b4fd34e998d3160, type: 2}
+  BaseEeveeSprite: {fileID: 21300000, guid: 5b140efb54b4d40478d6810c02175caa, type: 3}
   Items:
     ObtainedItems: []
   AllItemsGetter: {fileID: 492979935}
@@ -624,6 +626,52 @@ MonoBehaviour:
     - ItemObject: {fileID: 11400000, guid: 400a8d1bd62250e4693f79196bfa3ca5, type: 2}
       IsObtained: 0
     - ItemObject: {fileID: 11400000, guid: 822ffc3e37a69df46be77a53281c6c58, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 4b717a5fe7d8f414db02557024e327d8, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 5ca98405790e6c44ea7b423a81e7d19d, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 7a65afb5c890c9a4ea34cfaa889866af, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: f227ad062c314f543b96268f2845b2aa, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: ed76b736c6fe89943ac61ce8184d0520, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 6518f80fb7dae6d4489f8d9599d34dfa, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 5595e2a9bd50abf46bf14573e0df2f12, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 4bc56cd78e6b5954a800639b18e27361, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 899af6dea5b17914592cca49e68b53bc, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 273390b15e06cfa44b393e5861e611cf, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 0f306f16491c62a49be2ce2a04b76733, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 2bed217dafb4e3145ac952b8744cf15d, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: b9a977fc497542349ac1a4d1aff01618, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 63bfa6be6ef59634ca2476f67ff49aaa, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 1ff958973e9003a4ca6a6cc19b65090b, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 1bf3f1d8e8188f84d988c78e57fc73f0, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 01b77d7a32502aa4c8ab002ce15118e1, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 4774479d9d7fc8845996c1f6f9f85d91, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 22f156209e2e59d4db26cb12cc4485f1, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 51c474d3c45b3e84cac522a130057ae7, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 0df47cb249f27af4ebec63c939e16c38, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 14556e7cf56ad69429e388ac41cab70f, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: ffba2d9d279125945b4fd34e998d3160, type: 2}
       IsObtained: 0
   Path: Assets/Resources/Item/Accessory/
   PathEnTrop: Assets/Resources/

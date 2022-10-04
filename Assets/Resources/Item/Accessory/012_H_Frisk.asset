@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fffbc4f339165f24a92700ecc48698f2, type: 3}
+  m_Name: 012_H_Frisk
+  m_EditorClassIdentifier: 
+  ID: 12
+  Rating: 1
+  AccessoryType: Chapeau
+  Sprite: {fileID: 21300000, guid: 3659083c9869e064abebb6c8b5bc378f, type: 3}
+  AccessoryName: "T\xEAte de Frisk"
+  Description: I MUST BE THE ONE! I WILL CAPTURE A HUMAN!
+  IsColorable: 0

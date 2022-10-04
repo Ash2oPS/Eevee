@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fffbc4f339165f24a92700ecc48698f2, type: 3}
+  m_Name: 015_H_Couronne
+  m_EditorClassIdentifier: 
+  ID: 15
+  Rating: 2
+  AccessoryType: Chapeau
+  Sprite: {fileID: 21300000, guid: 428eeb382601c7e4abce4eb774e41369, type: 3}
+  AccessoryName: Couronne
+  Description: "De quoi gouverner un petit pays de buveurs de th\xE9."
+  IsColorable: 0

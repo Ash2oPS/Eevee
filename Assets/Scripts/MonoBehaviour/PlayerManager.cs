@@ -23,7 +23,7 @@ public class PlayerManager : MonoBehaviour
     private Pokemon _myPoke;
 
     [SerializeField]
-    public HUD _currentHUD;
+    public NugzCounter _currentHUD;
 
     public Transition TransitionPrefab;
 
@@ -91,7 +91,7 @@ public class PlayerManager : MonoBehaviour
 
     public void GetHUD()
     {
-        _currentHUD = FindObjectOfType<HUD>();
+        _currentHUD = FindObjectOfType<NugzCounter>();
     }
 
     public void GetPokemon(Pokemon poke)
@@ -129,10 +129,16 @@ public class PlayerManager : MonoBehaviour
 
     private void NuggetsHUDUpdate()
     {
-        if (_currentHUD != null)
+        if (_currentHUD == null)
         {
-            _currentHUD.UpdateNuggets(_nuggets);
+            _currentHUD = FindObjectOfType<NugzCounter>();
+            if (_currentHUD == null)
+            {
+                return;
+            }
         }
+
+        _currentHUD.UpdateNugz(_nuggets);
     }
 
     #endregion Nuggets

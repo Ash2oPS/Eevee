@@ -7,6 +7,8 @@ public class Shop : MonoBehaviour
     private PlayerManager _pm;
     private Hub_HUD _hud;
     private AccessoryManager _am;
+    private bool hasBought;
+    public Animation anim;
 
     [Header("----------Stats")]
     public int GachaCost;
@@ -24,7 +26,26 @@ public class Shop : MonoBehaviour
     public void GainNugz(int value)
     {
         _pm.AddNuggets(value);
-        _hud.UpdateNugz();
+    }
+
+    public void Leave()
+    {
+        if (hasBought)
+        {
+            Quit();
+        }
+
+        anim.Play("Shop_SaD_A");
+    }
+
+    public void SeChanger()
+    {
+        Debug.Log("Hop on se change");
+    }
+
+    public void Quit()
+    {
+        _pm.LoadRoom("Hub");
     }
 
     public void Gacha()
@@ -47,5 +68,7 @@ public class Shop : MonoBehaviour
         RewardShow rs = Instantiate(RewardShow_PF, Camera.main.transform);
         rs.transform.position = new Vector3(0, 0, 10);
         rs.OnCreated(reward);
+
+        hasBought = true;
     }
 }

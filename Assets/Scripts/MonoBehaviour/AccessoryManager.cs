@@ -12,6 +12,9 @@ public class AccessoryManager : MonoBehaviour
     public Neck NeckAsset;
     public Ear EarAsset;
     public Tail TailAsset;
+    public Body BodyAsset;
+
+    public Sprite BaseEeveeSprite;
 
     public AllObtainedItems Items;
 
@@ -38,12 +41,13 @@ public class AccessoryManager : MonoBehaviour
         }
     }
 
-    public void WearAccessories(SpriteRenderer hatSR, SpriteRenderer neckSR, SpriteRenderer earSR, SpriteRenderer tailSR)
+    public void WearAccessories(SpriteRenderer hatSR, SpriteRenderer neckSR, SpriteRenderer earSR, SpriteRenderer tailSR, SpriteRenderer bodySR)
     {
         WearHat(hatSR);
         WearNeck(neckSR);
         WearEar(earSR);
         WearTail(tailSR);
+        WearBody(bodySR);
     }
 
     private void WearHat(SpriteRenderer sr)
@@ -84,6 +88,20 @@ public class AccessoryManager : MonoBehaviour
         }
 
         sr.sprite = TailAsset.Sprite;
+    }
+
+    private void WearBody(SpriteRenderer sr)
+    {
+        if (sr == null)
+        {
+            return;
+        }
+
+        if (BodyAsset == null)
+        {
+            sr.sprite = BaseEeveeSprite;
+        }
+        sr.sprite = BodyAsset.Sprite;
     }
 
     public void GainReward(Accessory a, bool save)

@@ -27,7 +27,7 @@ public class Pokemon : MonoBehaviour
         PlayerManager.GetHUD();
         PlayerManager.GetPokemon(this);
         PlayerManager.GetGameManager();
-        PlayerManager.AM.WearAccessories(HatSR, NeckSR, EarSR, TailSR);
+        PlayerManager.AM.WearAccessories(HatSR, NeckSR, EarSR, TailSR, EeveeSpriteRenderer);
         CanMove = false;
     }
 

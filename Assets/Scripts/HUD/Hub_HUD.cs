@@ -15,15 +15,6 @@ public class Hub_HUD : MonoBehaviour
     private void Start()
     {
         _pm = PlayerManager.Instance;
-        nugz = _pm._nuggets;
-
-        UpdateNugz();
-    }
-
-    public void UpdateNugz()
-    {
-        nugz = _pm._nuggets;
-        _nugzTMP.text = nugz.ToString();
     }
 
     public void GoTo(string scene)
