@@ -2787,8 +2787,9 @@ GameObject:
   - component: {fileID: 1074247048}
   - component: {fileID: 1074247047}
   - component: {fileID: 1074247046}
+  - component: {fileID: 1074247050}
   m_Layer: 5
-  m_Name: ChangeCanvas
+  m_Name: ChangeUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2883,6 +2884,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1074247050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074247045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1ede14a8edcb4d8ab8543595e6022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1177547717 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4823192230619465026, guid: 1c32161a2bd3d5e40a6d8370c88248dc, type: 3}
@@ -3768,7 +3781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 88, y: -29.6}
+  m_AnchoredPosition: {x: 88, y: -29.599998}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1545290185
@@ -4850,6 +4863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit

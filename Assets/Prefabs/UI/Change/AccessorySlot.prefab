@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 5693169533936675113}
   - component: {fileID: 184664071414849246}
   - component: {fileID: 5022947606324475842}
+  - component: {fileID: 1290910542259062264}
   m_Layer: 5
   m_Name: AccessorySlot
   m_TagString: Untagged
@@ -215,11 +216,11 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
+    m_FadeDuration: 0.05
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -232,7 +233,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 2430643809656692318}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -250,4 +251,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AccessoryAsset: {fileID: 0}
   Change: {fileID: 0}
-  i: {fileID: 7780563325958449129}
+  i: {fileID: 2430643809656692318}
+  AccDesc: {fileID: 0}
+  b: {fileID: 184664071414849246}
+  OnHover:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!61 &1290910542259062264
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294844800905780382}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
