@@ -38,6 +38,20 @@ public class Shop : MonoBehaviour
         anim.Play("Shop_SaD_A");
     }
 
+    /*public void WearIt(Accessory a)
+    {
+        switch (a)
+        {
+            case Hat h:
+                _am.HatAsset = h;
+                break;
+
+            case Neck n:
+                _am.NeckAsset = n;
+                break;
+        }
+    }*/
+
     public void SeChanger()
     {
         Debug.Log("Hop on se change");

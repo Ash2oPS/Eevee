@@ -11,6 +11,7 @@ public class ChangeEevee : MonoBehaviour
     private void Start()
     {
         _am = FindObjectOfType<AccessoryManager>();
+        WearAccessories();
     }
 
     public void WearAccessories()
