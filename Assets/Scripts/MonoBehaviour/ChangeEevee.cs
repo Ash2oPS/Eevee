@@ -6,12 +6,39 @@ using UnityEngine.UI;
 public class ChangeEevee : MonoBehaviour
 {
     public Image EeveeImage, HatImage, NeckImage, TailImage, EarImage;
-    private AccessoryManager _am;
+    public AccessoryManager AM;
+    private Accessory _newHat, _newNeck, _newTail, _newEar, _newBody;
+    private Accessory _oldHat, _oldNeck, _oldTail, _oldEar, _oldBody;
 
     private void Start()
     {
-        _am = FindObjectOfType<AccessoryManager>();
+        AM = FindObjectOfType<AccessoryManager>();
+        OldAccessories();
         WearAccessories();
+    }
+
+    private void OldAccessories()
+    {
+        _oldHat = AM.HatAsset;
+        _oldNeck = AM.NeckAsset;
+        _oldTail = AM.TailAsset;
+        _oldEar = AM.EarAsset;
+        _oldBody = AM.BodyAsset;
+
+        _newHat = _oldHat;
+        _newNeck = _oldNeck;
+        _newTail = _oldTail;
+        _newEar = _oldEar;
+        _newBody = _oldBody;
+    }
+
+    public void KeepOldAccessories()
+    {
+        AM.HatAsset = _oldHat as Hat;
+        AM.NeckAsset = _oldNeck as Neck;
+        AM.TailAsset = _oldTail as Tail;
+        AM.EarAsset = _oldEar as Ear;
+        AM.BodyAsset = _oldBody as Body;
     }
 
     public void WearAccessories()
@@ -25,42 +52,73 @@ public class ChangeEevee : MonoBehaviour
 
     private void WearHat(Image i)
     {
-        if (_am.HatAsset == null || i == null)
+        if (i == null)
         {
             return;
         }
 
-        i.sprite = _am.HatAsset.Sprite;
+        if (AM.HatAsset == null)
+        {
+            i.color = new Color(1, 1, 1, 0);
+            return;
+        }
+
+        i.color = new Color(1, 1, 1, 1);
+        i.sprite = AM.HatAsset.Sprite;
     }
 
     private void WearNeck(Image i)
     {
-        if (_am.NeckAsset == null || i == null)
+        if (i == null)
         {
             return;
         }
 
-        i.sprite = _am.NeckAsset.Sprite;
+        if (AM.NeckAsset == null)
+        {
+            i.color = new Color(1, 1, 1, 0);
+            return;
+        }
+
+        i.color = new Color(1, 1, 1, 1);
+
+        i.sprite = AM.NeckAsset.Sprite;
     }
 
     private void WearEar(Image i)
     {
-        if (_am.EarAsset == null || i == null)
+        if (i == null)
         {
             return;
         }
 
-        i.sprite = _am.EarAsset.Sprite;
+        if (AM.EarAsset == null)
+        {
+            i.color = new Color(1, 1, 1, 0);
+            return;
+        }
+
+        i.color = new Color(1, 1, 1, 1);
+
+        i.sprite = AM.EarAsset.Sprite;
     }
 
     private void WearTail(Image i)
     {
-        if (_am.TailAsset == null || i == null)
+        if (i == null)
         {
             return;
         }
 
-        i.sprite = _am.TailAsset.Sprite;
+        if (AM.TailAsset == null)
+        {
+            i.color = new Color(1, 1, 1, 0);
+            return;
+        }
+
+        i.color = new Color(1, 1, 1, 1);
+
+        i.sprite = AM.TailAsset.Sprite;
     }
 
     private void WearBody(Image i)
@@ -70,10 +128,11 @@ public class ChangeEevee : MonoBehaviour
             return;
         }
 
-        if (_am.BodyAsset == null)
+        if (AM.BodyAsset == null)
         {
-            i.sprite = _am.BaseEeveeSprite;
+            i.sprite = AM.BaseEeveeSprite;
+            return;
         }
-        i.sprite = _am.BodyAsset.Sprite;
+        i.sprite = AM.BodyAsset.Sprite;
     }
 }

@@ -62,7 +62,6 @@ public class EeveeLauncher : MonoBehaviour
 
     public void Continue()
     {
-        //LoadRoom("Hub");
         _pm.Load();
         _pm.LoadRoom("Hub");
     }

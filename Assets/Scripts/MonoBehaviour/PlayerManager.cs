@@ -65,7 +65,8 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            Destroy(this);
+            Destroy(Instance.gameObject);
+            Instance = this;
         }
 
         DontDestroyOnLoad(this);
@@ -161,12 +162,16 @@ public class PlayerManager : MonoBehaviour
 
     private IEnumerator SceneTransition(string scene)
     {
+        Debug.Log("TODO : FIX LA TRANSITION (notamment en quittant le shop) EN APPELANT CES PROCHAINES LIGNES SOUS" +
+            "FORME D'APPEL DE FONCTIONS VIA L'ANIM DE LA TRANSITION");
+
         Transition trans = TransitionAnim(false);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         trans.transform.parent = this.transform;
+        yield return new WaitForSeconds(0.2f);
         trans.transform.localScale = Vector3.one * 2;
         SceneManager.LoadScene(scene);
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.3f);
         trans.transform.localScale = Vector3.one;
         trans.transform.parent = FindObjectOfType<Camera>().transform;
         yield return new WaitForSeconds(0.2f);
@@ -222,6 +227,21 @@ public class PlayerManager : MonoBehaviour
         {
             AM.GainReward(AM.Items.ObtainedItems[i].ItemObject as Accessory, false);
         }
+
+        if (data.currentAccessoryIDs[0] != -1)
+            AM.HatAsset = AM.Items.ObtainedItems[data.currentAccessoryIDs[0]].ItemObject as Hat;
+
+        if (data.currentAccessoryIDs[1] != -1)
+            AM.EarAsset = AM.Items.ObtainedItems[data.currentAccessoryIDs[1]].ItemObject as Ear;
+
+        if (data.currentAccessoryIDs[2] != -1)
+            AM.TailAsset = AM.Items.ObtainedItems[data.currentAccessoryIDs[2]].ItemObject as Tail;
+
+        if (data.currentAccessoryIDs[3] != -1)
+            AM.NeckAsset = AM.Items.ObtainedItems[data.currentAccessoryIDs[3]].ItemObject as Neck;
+
+        if (data.currentAccessoryIDs[4] != -1)
+            AM.BodyAsset = AM.Items.ObtainedItems[data.currentAccessoryIDs[4]].ItemObject as Body;
     }
 
     private PlayerData RawLoad(string path)
@@ -275,12 +295,28 @@ public class PlayerData
     public int Nugs;
     public string PlayerName;
     public int[] itemIDs;
+    public int[] currentAccessoryIDs;
 
     public PlayerData(PlayerManager pm)
     {
         Nugs = pm._nuggets;
         PlayerName = pm._playerName;
         itemIDs = pm.AM.ItemIDs.ToArray();
+
+        currentAccessoryIDs = new int[5];
+
+        currentAccessoryIDs[0] = GetAccessoryID(pm.AM.HatAsset);
+        currentAccessoryIDs[1] = GetAccessoryID(pm.AM.EarAsset);
+        currentAccessoryIDs[2] = GetAccessoryID(pm.AM.TailAsset);
+        currentAccessoryIDs[3] = GetAccessoryID(pm.AM.NeckAsset);
+        currentAccessoryIDs[4] = GetAccessoryID(pm.AM.BodyAsset);
+    }
+
+    private int GetAccessoryID(Accessory a)
+    {
+        if (a == null)
+            return -1;
+        return a.ID;
     }
 }
 

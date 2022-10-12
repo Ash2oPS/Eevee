@@ -46,4 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   GachaCost: 100
+  CommunLuck: 45
+  PeuCommunLuck: 35
+  RareLuck: 15
+  LegendaireLuck: 5
   RewardShow_PF: {fileID: 4570255494762602084, guid: b4909fd577609d74cb8ad5901950c9d4, type: 3}
+  ChangeUI_PF: {fileID: 0}

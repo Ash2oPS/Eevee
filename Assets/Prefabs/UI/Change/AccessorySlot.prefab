@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 5022947606324475842}
   - component: {fileID: 1290910542259062264}
   - component: {fileID: 2453606718778618098}
+  - component: {fileID: 1857561670223978864}
   m_Layer: 5
   m_Name: AccessorySlot
   m_TagString: Untagged
@@ -237,7 +238,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2430643809656692318}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5022947606324475842}
+        m_TargetAssemblyTypeName: AccessorySlotUI, Assembly-CSharp
+        m_MethodName: Description
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5022947606324475842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,9 +268,6 @@ MonoBehaviour:
   i: {fileID: 2430643809656692318}
   AccDesc: {fileID: 0}
   b: {fileID: 184664071414849246}
-  OnHover:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!61 &1290910542259062264
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -282,7 +292,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
 --- !u!114 &2453606718778618098
 MonoBehaviour:
@@ -332,3 +342,15 @@ MonoBehaviour:
   _onExitOver:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1857561670223978864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294844800905780382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e99aa111cedd24db0d93f83f001e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

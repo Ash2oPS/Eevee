@@ -12,6 +12,10 @@ public class NugzCounter : MonoBehaviour
     private void Start()
     {
         _pm = PlayerManager.Instance;
+        if (_pm == null)
+        {
+            return;
+        }
         nugz = _pm._nuggets;
 
         UpdateNugz(_pm._nuggets);

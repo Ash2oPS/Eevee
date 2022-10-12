@@ -17,6 +17,7 @@ public class AccessoryManager : MonoBehaviour
     public Sprite BaseEeveeSprite;
 
     public AllObtainedItems Items;
+    public List<Accessory> CommunAccessories, PeuCommunAccessories, RareAccessories, LegendaireAccessories;
 
     private List<int> _itemIDs;
 
@@ -28,6 +29,11 @@ public class AccessoryManager : MonoBehaviour
 
     private void Start()
     {
+        CommunAccessories = new List<Accessory>();
+        PeuCommunAccessories = new List<Accessory>();
+        RareAccessories = new List<Accessory>();
+        LegendaireAccessories = new List<Accessory>();
+
         CopyAllItems();
 
         _itemIDs = new List<int>();
@@ -38,6 +44,25 @@ public class AccessoryManager : MonoBehaviour
         foreach (ObtainedItem item in AllItemsGetter.Items.ObtainedItems)
         {
             Items.ObtainedItems.Add(new ObtainedItem(item.ItemObject, false));
+
+            switch ((item.ItemObject as Accessory).Rating)
+            {
+                case AccessoryRating.commun:
+                    CommunAccessories.Add(item.ItemObject as Accessory);
+                    break;
+
+                case AccessoryRating.peuCommun:
+                    PeuCommunAccessories.Add(item.ItemObject as Accessory);
+                    break;
+
+                case AccessoryRating.rare:
+                    RareAccessories.Add(item.ItemObject as Accessory);
+                    break;
+
+                case AccessoryRating.legendaireOMG:
+                    LegendaireAccessories.Add(item.ItemObject as Accessory);
+                    break;
+            }
         }
     }
 
@@ -100,6 +125,7 @@ public class AccessoryManager : MonoBehaviour
         if (BodyAsset == null)
         {
             sr.sprite = BaseEeveeSprite;
+            return;
         }
         sr.sprite = BodyAsset.Sprite;
     }

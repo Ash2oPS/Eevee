@@ -13,6 +13,8 @@ public class Shop : MonoBehaviour
     [Header("----------Stats")]
     public int GachaCost;
 
+    public int CommunLuck, PeuCommunLuck, RareLuck, LegendaireLuck;
+
     [Header("----------Prefabs")]
     public RewardShow RewardShow_PF;
 
@@ -22,6 +24,12 @@ public class Shop : MonoBehaviour
     {
         _pm = PlayerManager.Instance;
         _hud = FindObjectOfType<Hub_HUD>();
+
+        if (_pm == null)
+        {
+            return;
+        }
+
         _am = _pm.AM;
     }
 
@@ -56,7 +64,8 @@ public class Shop : MonoBehaviour
 
     public void SeChanger()
     {
-        Instantiate(ChangeUI_PF);
+        ChangeUI cui = Instantiate(ChangeUI_PF);
+        cui.OnCreated();
     }
 
     public void Quit()
@@ -74,7 +83,26 @@ public class Shop : MonoBehaviour
 
         GainNugz(GachaCost * -1);
 
-        Accessory reward = _am.Items.ObtainedItems[Random.Range(0, _am.Items.ObtainedItems.Count)].ItemObject as Accessory;
+        Accessory reward = null;
+
+        switch (RandomRating())
+        {
+            case AccessoryRating.commun:
+                reward = _am.CommunAccessories[Random.Range(0, _am.CommunAccessories.Count)];
+                break;
+
+            case AccessoryRating.peuCommun:
+                reward = _am.PeuCommunAccessories[Random.Range(0, _am.PeuCommunAccessories.Count)];
+                break;
+
+            case AccessoryRating.rare:
+                reward = _am.RareAccessories[Random.Range(0, _am.RareAccessories.Count)];
+                break;
+
+            case AccessoryRating.legendaireOMG:
+                reward = _am.LegendaireAccessories[Random.Range(0, _am.LegendaireAccessories.Count)];
+                break;
+        }
 
         _am.GainReward(reward, true);
 
@@ -86,5 +114,29 @@ public class Shop : MonoBehaviour
         rs.OnCreated(reward);
 
         hasBought = true;
+    }
+
+    private AccessoryRating? RandomRating()
+    {
+        if (CommunLuck + PeuCommunLuck + RareLuck + LegendaireLuck != 100)
+        {
+            Debug.LogError("Gatcha chances n'est pas égal à 100");
+            return null;
+        }
+
+        int rand = Random.Range(1, 100);
+
+        Debug.Log("Gacha random value = " + rand);
+
+        if (rand <= CommunLuck)
+            return AccessoryRating.commun;
+
+        if (rand <= CommunLuck + PeuCommunLuck)
+            return AccessoryRating.peuCommun;
+
+        if (rand <= CommunLuck + PeuCommunLuck + RareLuck)
+            return AccessoryRating.rare;
+
+        return AccessoryRating.legendaireOMG;
     }
 }

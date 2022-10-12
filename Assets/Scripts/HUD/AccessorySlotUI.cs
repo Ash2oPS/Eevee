@@ -11,25 +11,53 @@ public class AccessorySlotUI : MonoBehaviour
     public Image i;
     public AccessoryDescription AccDesc;
     public Button b;
+    private bool _obtained;
 
-    public void AssignAccessory(Accessory a, ChangeEevee ce, AccessoryDescription ad)
+    public void AssignAccessory(Accessory a, ChangeEevee ce, AccessoryDescription ad, bool obtained)
     {
-        AccessoryAsset = a;
         Change = ce;
-        i.sprite = a.Sprite;
         AccDesc = ad;
+        AccessoryAsset = a;
 
-        //TO DO :  au moment de créer tous les slots, on assigne le changeEevee (l'évoli de preview qui montrer les accessoires qui vont etre portés,
-        // l'accessory description (les textes et images de decription d'accessoire) et l'accessory asset
+        if (!obtained)
+            return;
+
+        _obtained = true;
+        i.sprite = a.Sprite;
     }
 
     public void Description()
     {
-        AccDesc.DisplayDesciption(AccessoryAsset);
+        AccDesc.DisplayDesciption(AccessoryAsset, _obtained);
+        if (_obtained)
+            WearIt();
     }
 
     public void WearIt()
     {
-        Debug.Log("oui");
+        switch (AccessoryAsset)
+        {
+            case Hat h:
+                Change.AM.HatAsset = h;
+                break;
+
+            case Neck n:
+                Change.AM.NeckAsset = n;
+                break;
+
+            case Tail t:
+                Change.AM.TailAsset = t;
+                break;
+
+            case Ear e:
+                Change.AM.EarAsset = e;
+                break;
+
+            case Body b:
+                Change.AM.BodyAsset = b;
+                break;
+        }
+
+        Change.WearAccessories();
     }
 }

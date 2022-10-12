@@ -17,7 +17,7 @@ public class ChangeUI : MonoBehaviour
     [SerializeField]
     private AccessorySlotUI _slotPF;
 
-    private void Start()
+    public void OnCreated()
     {
         CreateSlots();
     }
@@ -29,7 +29,20 @@ public class ChangeUI : MonoBehaviour
         foreach (ObtainedItem oi in aoi)
         {
             AccessorySlotUI slot = Instantiate(_slotPF, _slotsParent.transform);
-            slot.AssignAccessory(oi.ItemObject as Accessory, _changeEevee, _ad);
+
+            slot.AssignAccessory(oi.ItemObject as Accessory, _changeEevee, _ad, oi.IsObtained);
         }
+    }
+
+    public void Quit()
+    {
+        _changeEevee.KeepOldAccessories();
+        Destroy(gameObject);
+    }
+
+    public void Confirm()
+    {
+        PlayerManager.Instance.Save();
+        Destroy(gameObject);
     }
 }
