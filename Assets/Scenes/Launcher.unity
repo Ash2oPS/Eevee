@@ -671,6 +671,46 @@ MonoBehaviour:
       IsObtained: 0
     - ItemObject: {fileID: 11400000, guid: 14556e7cf56ad69429e388ac41cab70f, type: 2}
       IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: bbc89d3c62a0c824a9b5c859b2cbc490, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 5e698a18e5a306047be3103e2b8c27e7, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: aaf7299fa4e2ab14c934c2c4599d3e89, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 4240dab57d2db1f4e908b5dbe9b34475, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: a5a6d961b7049e44e86bee8177301072, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 79fbc947b7401dd49a836dbca6a6a4bb, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 9d4146009431a6b49b5735d6db24cb00, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 780c68fb199607a45baa314eaae9dc65, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: bd46f678904a6154f85abe60fbc8593d, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 774c0c4da7961924fa051be237e227c6, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 1d07b0e1a935a504693dafd8bb77b509, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 365882ad9759c6c4aafc47e4e160bfcc, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 7e77e8c762306b342bb93100333054f8, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 7582a494523fce3438ca0b93d7a172b8, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 3ae31f905d14ee04db42fdac567d2b3a, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: d3fd7c2da0a50a840b306a720a54a107, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: d8310703d6e272f4c967d9920d9e9a90, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 64b85afd7f42428489c03841f7ffe9e2, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: 264813135b04a264d8eb8107480fce7d, type: 2}
+      IsObtained: 0
+    - ItemObject: {fileID: 11400000, guid: a04a552b812e7b148b4983a9562c1b8b, type: 2}
+      IsObtained: 0
     - ItemObject: {fileID: 11400000, guid: ffba2d9d279125945b4fd34e998d3160, type: 2}
       IsObtained: 0
   Path: Assets/Resources/Item/Accessory/
@@ -2090,6 +2130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit

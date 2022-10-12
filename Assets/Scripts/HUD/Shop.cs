@@ -16,6 +16,8 @@ public class Shop : MonoBehaviour
     [Header("----------Prefabs")]
     public RewardShow RewardShow_PF;
 
+    public ChangeUI ChangeUI_PF;
+
     private void Start()
     {
         _pm = PlayerManager.Instance;
@@ -54,7 +56,7 @@ public class Shop : MonoBehaviour
 
     public void SeChanger()
     {
-        Debug.Log("Hop on se change");
+        Instantiate(ChangeUI_PF);
     }
 
     public void Quit()

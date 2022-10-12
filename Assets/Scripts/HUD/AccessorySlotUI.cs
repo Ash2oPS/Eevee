@@ -11,12 +11,6 @@ public class AccessorySlotUI : MonoBehaviour
     public Image i;
     public AccessoryDescription AccDesc;
     public Button b;
-    public UnityEvent OnHover;
-
-    private void Start()
-    {
-        OnHover.AddListener(Description);
-    }
 
     public void AssignAccessory(Accessory a, ChangeEevee ce, AccessoryDescription ad)
     {
@@ -29,13 +23,13 @@ public class AccessorySlotUI : MonoBehaviour
         // l'accessory description (les textes et images de decription d'accessoire) et l'accessory asset
     }
 
-    
-    private void Description()
+    public void Description()
     {
-        Debug.Log("oui");
+        AccDesc.DisplayDesciption(AccessoryAsset);
     }
 
     public void WearIt()
     {
+        Debug.Log("oui");
     }
 }

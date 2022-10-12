@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e686167e1fdc1c248a396c2f876c163e, type: 3}
+  m_Name: 032_B_Golden 16
+  m_EditorClassIdentifier: 
+  ID: 32
+  Rating: 3
+  AccessoryType: Corps
+  Sprite: {fileID: 21300000, guid: 88cbe465785598a438fdcf461c845acd, type: 3}
+  AccessoryName: Golden
+  Description: "De quoi bien montrer \xE0 tout le monde que t'as de la grosse moula
+    !"
+  IsColorable: 0
