@@ -6,6 +6,7 @@ using TMPro;
 public class RewardShow : MonoBehaviour
 {
     public Animation Anim;
+    public Sprite NugzSprite;
     public SpriteRenderer Hat_SR, Neck_SR, Tail_SR, Ear_SR, Eevee_SR;
     public TextMeshPro Item_TMP, Type_TMP, Rating_TMP;
     public string CommunText, PeuCommunText, RareText, LegendaireText;
@@ -65,6 +66,18 @@ public class RewardShow : MonoBehaviour
         Anim.Play("RewardShow_Apparition_A");
     }
 
+    public void OnCreated(int value)
+    {
+        Item_TMP.text = value.ToString() + " Nugz !";
+        Type_TMP.text = "";
+
+        Rating_TMP.text = "";
+
+        Eevee_SR.sprite = NugzSprite;
+
+        Anim.Play("RewardShow_Apparition_A");
+    }
+
     public void OnDestruction()
     {
         Anim.Play("RewardShow_Disparition_A");
@@ -72,6 +85,7 @@ public class RewardShow : MonoBehaviour
 
     public void EndAnim()
     {
+        FindObjectOfType<Shop>().SetButtonsEnabled(true);
         Destroy(gameObject);
     }
 }

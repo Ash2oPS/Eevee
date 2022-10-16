@@ -19,6 +19,7 @@ public class Exit : Collectable
 
         pm.HeldBagOfNuggets.OnEnteringExit();
         pm.Save();
+        pm.LoadRoom("Hub");
     }
 
     protected override void OnDestroyed()

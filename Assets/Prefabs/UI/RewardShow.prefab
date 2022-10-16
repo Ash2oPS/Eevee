@@ -185,7 +185,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "L\xE9gendaire"
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5cd46737574f39d4ebe2cc923d736f21, type: 2}
   m_sharedMaterial: {fileID: -7445933100851220940, guid: 5cd46737574f39d4ebe2cc923d736f21, type: 2}
@@ -794,7 +796,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1847146663
   m_SortingLayer: 7
-  m_SortingOrder: 2
+  m_SortingOrder: 19
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1050,6 +1052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Anim: {fileID: 2962350059309568728}
+  NugzSprite: {fileID: 21300000, guid: ff458f7631a1474438717480279397b4, type: 3}
   Hat_SR: {fileID: 7156433519820141597}
   Neck_SR: {fileID: 8005534924709385915}
   Tail_SR: {fileID: 877706520834142784}
@@ -1291,7 +1294,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Boucle d'oreille
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5cd46737574f39d4ebe2cc923d736f21, type: 2}
   m_sharedMaterial: {fileID: -7445933100851220940, guid: 5cd46737574f39d4ebe2cc923d736f21, type: 2}
@@ -1475,7 +1478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oreille
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5cd46737574f39d4ebe2cc923d736f21, type: 2}
   m_sharedMaterial: {fileID: -7445933100851220940, guid: 5cd46737574f39d4ebe2cc923d736f21, type: 2}

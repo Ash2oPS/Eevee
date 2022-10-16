@@ -11,6 +11,7 @@ public class AutoParentToCam : MonoBehaviour
         Transform cam = FindObjectOfType<Camera>().transform;
 
         transform.parent = cam;
+
         if (Centered)
             transform.localPosition = new Vector3(0, 0, 10);
     }

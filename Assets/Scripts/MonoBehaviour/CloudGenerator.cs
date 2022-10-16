@@ -31,9 +31,9 @@ public class CloudGenerator : MonoBehaviour
     private void SpawnCloud(Vector3 pos)
     {
         Cloud cloud = Instantiate(CloudPrefab, transform);
-        transform.localPosition = pos;
+        cloud.transform.localPosition = pos;
         cloud.Sr.sprite = SpritePicker();
-        cloud.Sr.sortingOrder = Random.Range(-35, -7);
+        cloud.Sr.sortingOrder = Random.Range(-40, -15);
 
         cloud.OnCreated();
     }

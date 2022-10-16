@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Shop : MonoBehaviour
     private AccessoryManager _am;
     private bool hasBought;
     public Animation anim;
+
+    public List<Button> OtherButtons;
 
     [Header("----------Stats")]
     public int GachaCost;
@@ -48,24 +51,19 @@ public class Shop : MonoBehaviour
         anim.Play("Shop_SaD_A");
     }
 
-    /*public void WearIt(Accessory a)
-    {
-        switch (a)
-        {
-            case Hat h:
-                _am.HatAsset = h;
-                break;
-
-            case Neck n:
-                _am.NeckAsset = n;
-                break;
-        }
-    }*/
-
     public void SeChanger()
     {
         ChangeUI cui = Instantiate(ChangeUI_PF);
         cui.OnCreated();
+        SetButtonsEnabled(false);
+    }
+
+    public void SetButtonsEnabled(bool value)
+    {
+        foreach (Button b in OtherButtons)
+        {
+            b.enabled = value;
+        }
     }
 
     public void Quit()
@@ -81,39 +79,64 @@ public class Shop : MonoBehaviour
             return;
         }
 
+        SetButtonsEnabled(false);
+
         GainNugz(GachaCost * -1);
 
         Accessory reward = null;
+        int nugzValue = 0;
 
         switch (RandomRating())
         {
             case AccessoryRating.commun:
                 reward = _am.CommunAccessories[Random.Range(0, _am.CommunAccessories.Count)];
+                nugzValue = 50;
                 break;
 
             case AccessoryRating.peuCommun:
                 reward = _am.PeuCommunAccessories[Random.Range(0, _am.PeuCommunAccessories.Count)];
+                nugzValue = 75;
                 break;
 
             case AccessoryRating.rare:
                 reward = _am.RareAccessories[Random.Range(0, _am.RareAccessories.Count)];
+                nugzValue = 90;
                 break;
 
             case AccessoryRating.legendaireOMG:
                 reward = _am.LegendaireAccessories[Random.Range(0, _am.LegendaireAccessories.Count)];
+                nugzValue = 170;
                 break;
         }
 
-        _am.GainReward(reward, true);
-
-        Debug.Log(reward.AccessoryName + " " + reward.ID);
-        Debug.Log(((_am.Items.ObtainedItems[reward.ID].ItemObject) as Accessory).AccessoryName + " " + _am.Items.ObtainedItems[reward.ID].IsObtained);
-
         RewardShow rs = Instantiate(RewardShow_PF, Camera.main.transform);
         rs.transform.position = new Vector3(0, 0, 10);
-        rs.OnCreated(reward);
-
         hasBought = true;
+
+        if (!CheckIfIsOwwned(reward))
+        {
+            _am.GainReward(reward, true);
+            rs.OnCreated(reward);
+
+            return;
+        }
+
+        rs.OnCreated(nugzValue);
+
+        _pm.AddNuggets(nugzValue);
+
+        _pm.Save();
+    }
+
+    public bool CheckIfIsOwwned(Accessory a)
+    {
+        if (_am.Items.ObtainedItems[a.ID].IsObtained)
+        {
+            Debug.Log((_am.Items.ObtainedItems[a.ID].ItemObject as Accessory).AccessoryName + (_am.Items.ObtainedItems[a.ID].ItemObject as Accessory).ID + " était déjà obtenu.");
+            return true;
+        }
+
+        return false;
     }
 
     private AccessoryRating? RandomRating()

@@ -37,12 +37,14 @@ public class ChangeUI : MonoBehaviour
     public void Quit()
     {
         _changeEevee.KeepOldAccessories();
+        FindObjectOfType<Shop>().SetButtonsEnabled(true);
         Destroy(gameObject);
     }
 
     public void Confirm()
     {
         PlayerManager.Instance.Save();
+        FindObjectOfType<Shop>().SetButtonsEnabled(true);
         Destroy(gameObject);
     }
 }

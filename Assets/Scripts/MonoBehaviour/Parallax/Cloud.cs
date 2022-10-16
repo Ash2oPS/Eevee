@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Cloud : Parallax
 {
-    public void OnCreated()
+    public override void Start()
     {
+    }
+
+    public override void OnCreated()
+    {
+        base.OnCreated();
+
         float r, g, b, a;
         r = Random.Range(.98f, 1f);
         g = Random.Range(.98f, 1f);
         b = Random.Range(.98f, 1f);
-        a = (float)_order * .02f + 1;
+        a = (float)_order * 0.02f + 1f;
 
-        Color newCol = new Vector4(r, g, b, a);
+        Color newCol = new Color(r, g, b, a);
 
         Sr.color = newCol;
     }
