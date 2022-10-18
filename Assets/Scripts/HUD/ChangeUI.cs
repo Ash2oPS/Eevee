@@ -25,13 +25,13 @@ public class ChangeUI : MonoBehaviour
     public void CreateSlots()
     {
         List<ObtainedItem> aoi = PlayerManager.Instance.AM.Items.ObtainedItems;
+        /*
+                foreach (ObtainedItem oi in aoi)
+                {
+                    AccessorySlotUI slot = Instantiate(_slotPF, _slotsParent.transform);
 
-        foreach (ObtainedItem oi in aoi)
-        {
-            AccessorySlotUI slot = Instantiate(_slotPF, _slotsParent.transform);
-
-            slot.AssignAccessory(oi.ItemObject as Accessory, _changeEevee, _ad, oi.IsObtained);
-        }
+                    slot.AssignAccessory(oi.ItemObject as Accessory, _changeEevee, _ad, oi.IsObtained);
+                }*/
     }
 
     public void Quit()

@@ -2410,7 +2410,7 @@ GameObject:
   - component: {fileID: 8189972934315490334}
   - component: {fileID: 1722826075756186218}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: AccessoiresText_TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2666,7 +2666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 186905770570259125, guid: 6dd82a8203a9b4d4690900597c57491e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -6.2173414
       objectReference: {fileID: 0}
     - target: {fileID: 186905770570259125, guid: 6dd82a8203a9b4d4690900597c57491e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2686,11 +2686,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 186905770570259125, guid: 6dd82a8203a9b4d4690900597c57491e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 210
+      value: 207.90002
       objectReference: {fileID: 0}
     - target: {fileID: 186905770570259125, guid: 6dd82a8203a9b4d4690900597c57491e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 135
+      value: 139.20001
       objectReference: {fileID: 0}
     - target: {fileID: 186905770570259125, guid: 6dd82a8203a9b4d4690900597c57491e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
